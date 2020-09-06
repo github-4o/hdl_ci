@@ -1,6 +1,10 @@
 # Specify, that we want to use docker in the docker :)
 services:
   - docker
+  
+before_install:
+- docker pull ghdl/ghdl
+  
 # Here are the list of run scripts of different DUTs/testcases
 script:
     # Testing the installation of the ghdl
